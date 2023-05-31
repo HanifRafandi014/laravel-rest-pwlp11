@@ -45,9 +45,9 @@ class MahasiswaController extends Controller
             [
                 'nim' => $request->nim,
                 'nama' => $request->nama,
-                'kelas_id' => $request->kelas,
+                'kelas' => $request->kelas,
                 'jurusan' => $request->jurusan,
-                'no_hp' => $request->no_hp,
+                'no_handphone' => $request->no_handphone,
             ]
         ));
     }
@@ -60,7 +60,6 @@ class MahasiswaController extends Controller
      */
     public function show(Mahasiswa $mahasiswa)
     {
-        //
         return new MahasiswaResource($mahasiswa);
     }
 
@@ -84,13 +83,12 @@ class MahasiswaController extends Controller
      */
     public function update(UpdateMahasiswaRequest $request, Mahasiswa $mahasiswa)
     {
-        //
         $mahasiswa->update([
             'nim' => $request->nim,
             'nama' => $request->nama,
             'jurusan' => $request->jurusan,
-            'no_hp' => $request->no_hp,
-            'kelas_id' => $request->kelas_id,
+            'no_handphone' => $request->no_handphone,
+            'kelas' => $request->kelas,
         ]);
         return new MahasiswaResource($mahasiswa);
     }

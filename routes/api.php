@@ -29,7 +29,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('/mahasiswa', MahasiswaController::class);
 
-Route::post('/login', [ApiAuthController::class,'login']);
+// Route::post('/login', [ApiAuthController::class,'login']);
 
 // Route::middleware('auth:sanctum')->group(function() {
 //     Route::apiResource('/mahasiswa',MahasiswaController::class);

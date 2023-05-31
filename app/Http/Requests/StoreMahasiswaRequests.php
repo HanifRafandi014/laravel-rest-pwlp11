@@ -24,12 +24,11 @@ class StoreMahasiswaRequests extends FormRequest
     public function rules()
     {
         return [
-            //
             'nim' => 'required|min:10',
             'nama'=> 'required',
             'kelas' => 'required',
             'jurusan' => 'required',
-            'no_hp' => 'required|min:12',
+            'no_handphone' => 'required|min:12',
         ];
     }
 }
