@@ -32,11 +32,11 @@ class ApiAuthController extends Controller
             'token'=>$token,
         ],200);
 
-        // return new LoginResource([
-        //     'message'=>'success login',
-        //     'user'=>$user,
-        //     'token'=>$token,
-        // ],200);
+        return new LoginResource([
+            'message'=>'success login',
+            'user'=>$user,
+            'token'=>$token,
+        ],200);
     } 
 
     public function logout(Request $request) {
